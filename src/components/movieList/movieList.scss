@@ -1,0 +1,7 @@
+@use "../../scss/breakpoint" as *;
+
+.movie-list {
+   .swiper-slide {
+      width: 15%;
+   }
+}
