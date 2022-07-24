@@ -64,7 +64,7 @@
       }
 
       .btns > * ~ * {
-        margin-left: 1rem;
+        margin-left: 10px;
       }
 
       .btns,
@@ -78,6 +78,8 @@
 
     &__poster {
       flex: 1;
+      padding-left: 1rem;
+      padding-bottom: 1.5rem;
       @include flex(center, flex-start);
       position: relative;
 

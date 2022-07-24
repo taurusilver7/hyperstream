@@ -21,7 +21,7 @@ const HeroSlide = () => {
       const params = { page: 1 };
       try {
         const res = await tmdbApi.getMoviesList(movieType.popular, { params });
-        setMovieItems(res?.results.slice(0, 3));
+        setMovieItems(res?.results.slice(4, 10));
         //   console.log(res);
       } catch (error) {
         console.log("Error:", error);
@@ -67,7 +67,6 @@ const HeroSlideItem = (props) => {
 
   const setModalActive = async () => {
     const modal = document.querySelector(`#modal_${item.id}`);
-    console.log(modal);
     const videos = await tmdbApi.getVideos(category.movie, item.id);
 
     if (videos.results.length > 0) {
@@ -79,7 +78,6 @@ const HeroSlideItem = (props) => {
       modal.querySelector(".modal__content").innerHTML = "No trailer available";
     }
     modal.classList.toggle("active");
-    console.log("Trailer not plated");
   };
   return (
     <div
