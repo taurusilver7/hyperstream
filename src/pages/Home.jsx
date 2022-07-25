@@ -6,6 +6,8 @@ import HeroSlide from "../components/hero-slide/HeroSlide";
 import MovieList from "../components/movieList/MovieList";
 
 const Home = () => {
+  window.scrollTo(0, 0);
+
   return (
     <>
       <HeroSlide />
