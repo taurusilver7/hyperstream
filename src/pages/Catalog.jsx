@@ -7,6 +7,8 @@ import MovieGrid from "../components/movieGrid/MovieGrid";
 const Catalog = () => {
   const { catagory } = useParams();
   // console.log(catagory);
+  window.scrollTo(0, 0);
+
   return (
     <>
       <PageHeader>
