@@ -18,7 +18,7 @@ const headerNav = [
   },
 ];
 
-const Header = (props) => {
+const Header = () => {
   const { pathname } = useLocation();
   const headerRef = useRef(null);
   const active = headerNav.findIndex((e) => e.path === pathname);
@@ -35,6 +35,7 @@ const Header = (props) => {
       }
     };
 
+    window.addEventListener("scroll", shrinkHeader);
     return () => {
       window.removeEventListener("scroll", shrinkHeader);
     };
@@ -50,7 +51,7 @@ const Header = (props) => {
         <ul className="header__nav">
           {headerNav.map((e, i) => (
             <li key={i} className={`${i === active ? "active" : ""}`}>
-              <Link to={e.path}>{e.display}</Link>
+              <Link to={e?.path}>{e.display}</Link>
             </li>
           ))}
         </ul>
