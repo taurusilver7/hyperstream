@@ -7,6 +7,7 @@ import "./movieCard.scss";
 
 const MovieCard = (props) => {
   const item = props.item;
+  // console.log(props);
   const link = "/" + category[props.category] + "/" + item.id;
   const bg = apiConfig.w500Image(item.poster_path || item.backdrop_path);
   return (
