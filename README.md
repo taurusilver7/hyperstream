@@ -53,6 +53,14 @@ yarn add react-router-dom sass query-string swiper axios
 - Pick the id & category of an item result from `useParams()` hook.
 - Create an async fun in useEffect to get the item details from `tmdbApi` through the API. Set the window screen to top.
 
+- Populate the item results in the details page. The background image (banner), the poster container, and the item content-info.
+
+- Create a component in the detial directory to populate the cast details. Send a req to the API to get the item content cast details.
+
+- Create a similar component to populate the item trailer videos to play them with youtube.com/embed technique.
+
+- Add another MovieList with the similar type of the same category as the item results.
+
 ### Deployment
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
