@@ -2,6 +2,8 @@
 
 A popular movie & TV show video streaming service powered by React & styled with SASS.
 
+![hyperstream-banner](https://i.ibb.co/gFgGGsm/hyperstream.png)
+
 ## Scripts
 
 ```bash
