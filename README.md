@@ -2,7 +2,7 @@
 
 A popular movie & TV show video streaming service powered by React & styled with SASS.
 
-![hyperstream-banner](https://i.ibb.co/gFgGGsm/hyperstream.png)
+![hyperstream-banner](./public/hyperstream.png)
 
 ## Scripts
 
@@ -19,49 +19,49 @@ yarn add react-router-dom sass query-string swiper axios
 
 ## Build
 
-- Refactor the started template to suit the application development process.
+-  Refactor the started template to suit the application development process.
 
-- Import [sass](https://sass-lang.com/install) and create the necessary directories for code-splitting.
-- Import [axios](https://github.com/axios/axios) dependency to execute promise based http-requests & access the API.
+-  Import [sass](https://sass-lang.com/install) and create the necessary directories for code-splitting.
+-  Import [axios](https://github.com/axios/axios) dependency to execute promise based http-requests & access the API.
 
-- Import [swiper](https://swiperjs.com/react) or [swiper@6.8.4](https://www.npmjs.com/package/swiper/v/6.8.4) dependency, to add the animation swipe effect on the Header component.
+-  Import [swiper](https://swiperjs.com/react) or [swiper@6.8.4](https://www.npmjs.com/package/swiper/v/6.8.4) dependency, to add the animation swipe effect on the Header component.
 
-- Set the routes between the pages in `config/Routes`.
+-  Set the routes between the pages in `config/Routes`.
 
 ### Home
 
-- The Header component has elements that necessaties the navigation between Home & Catalog pages.
+-  The Header component has elements that necessaties the navigation between Home & Catalog pages.
 
-- The HeroSlide component displays a slide-show on the top movies spliced from the results array. For the Slider component to work in React 18, import `react@rc` and `react-dom@rc` instead of the generic libraries. Wrap the root component in createNode, instead of rendering the dom.
+-  The HeroSlide component displays a slide-show on the top movies spliced from the results array. For the Slider component to work in React 18, import `react@rc` and `react-dom@rc` instead of the generic libraries. Wrap the root component in createNode, instead of rendering the dom.
 
-- The MovieList components slides various categories of movies/tv on the Home page. Each of the item in the component are rendered in MovieCard component, which holds the category & id of the item result. Each MovieCard navigates to the Details page of the item results.
-- The footer component remains passive in the application
+-  The MovieList components slides various categories of movies/tv on the Home page. Each of the item in the component are rendered in MovieCard component, which holds the category & id of the item result. Each MovieCard navigates to the Details page of the item results.
+-  The footer component remains passive in the application
 
 ### Catalog
 
-- The Catalog page has the list of movies/tv shows, a search component, a `load more` button and the footer text.
+-  The Catalog page has the list of movies/tv shows, a search component, a `load more` button and the footer text.
 
-- The pageHeader followed the Header component, and displayed the Catalog category, with a opaque background.
-- The Search component takes in an input with a `useRef()` and `useCallback()` hook to search for the query-string in the databaase/api.
-- The MovieGrid component binds the Search, the array of MovieCards, and the load more button.
-- The loadMore() function increments the page from the results, and request a new array of results from the api, which was then populated in MovieCard components to display on the Catalog page.
+-  The pageHeader followed the Header component, and displayed the Catalog category, with a opaque background.
+-  The Search component takes in an input with a `useRef()` and `useCallback()` hook to search for the query-string in the databaase/api.
+-  The MovieGrid component binds the Search, the array of MovieCards, and the load more button.
+-  The loadMore() function increments the page from the results, and request a new array of results from the api, which was then populated in MovieCard components to display on the Catalog page.
 
 ### Details
 
-- The Details page has the detailed information of an item result, along with the trailers, and the cast information.
-- All the MovieCards hold the category & item id, which leads to the Details page.
-- The Header & footer components are stand-alone components, outside the routes.
+-  The Details page has the detailed information of an item result, along with the trailers, and the cast information.
+-  All the MovieCards hold the category & item id, which leads to the Details page.
+-  The Header & footer components are stand-alone components, outside the routes.
 
-- Pick the id & category of an item result from `useParams()` hook.
-- Create an async fun in useEffect to get the item details from `tmdbApi` through the API. Set the window screen to top.
+-  Pick the id & category of an item result from `useParams()` hook.
+-  Create an async fun in useEffect to get the item details from `tmdbApi` through the API. Set the window screen to top.
 
-- Populate the item results in the details page. The background image (banner), the poster container, and the item content-info.
+-  Populate the item results in the details page. The background image (banner), the poster container, and the item content-info.
 
-- Create a component in the detial directory to populate the cast details. Send a req to the API to get the item content cast details.
+-  Create a component in the detial directory to populate the cast details. Send a req to the API to get the item content cast details.
 
-- Create a similar component to populate the item trailer videos to play them with youtube.com/embed technique.
+-  Create a similar component to populate the item trailer videos to play them with youtube.com/embed technique.
 
-- Add another MovieList with the similar type of the same category as the item results.
+-  Add another MovieList with the similar type of the same category as the item results.
 
 ### Deployment
 
